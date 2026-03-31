@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>娟要天天开心</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #89b4ff 0%, #c6e4ff 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        /* 浮动星光动画（替换爱心） */
+        .heart {
+            position: fixed;
+            bottom: -50px;
+            font-size: 20px;
+            color: #4a8aff;
+            opacity: 0.7;
+            animation: float 8s ease-in-out infinite;
+            z-index: 0;
+        }
+
+        .heart:nth-child(1) { left: 10%; animation-delay: 0s; font-size: 16px; animation-duration: 8s; }
+        .heart:nth-child(2) { left: 20%; animation-delay: 1s; font-size: 20px; animation-duration: 10s; }
+        .heart:nth-child(3) { left: 35%; animation-delay: 2s; font-size: 24px; animation-duration: 12s; }
+        .heart:nth-child(4) { left: 50%; animation-delay: 0.5s; font-size: 18px; animation-duration: 9s; }
+        .heart:nth-child(5) { left: 65%; animation-delay: 1.5s; font-size: 22px; animation-duration: 11s; }
+        .heart:nth-child(6) { left: 80%; animation-delay: 2.5s; font-size: 16px; animation-duration: 10s; }
+        .heart:nth-child(7) { left: 90%; animation-delay: 1s; font-size: 20px; animation-duration: 8s; }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.7;
+            }
+            90% {
+                opacity: 0.7;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* 主卡片 */
+        .card {
+            background: rgba(255, 255, 255, 0.92);
+            border-radius: 32px;
+            box-shadow: 0 15px 35px rgba(74, 138, 255, 0.2);
+            padding: 70px 40px;
+            max-width: 550px;
+            width: 100%;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            position: relative;
+            z-index: 10;
+            animation: up 1s ease-out;
+        }
+
+        @keyframes up {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* 标题呼吸动画 */
+        .text {
+            font-size: 40px;
+            font-weight: bold;
+            color: #4a8aff;
+            line-height: 1.5;
+            animation: breathe 3s ease-in-out infinite;
+        }
+
+        @keyframes breathe {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 16px;
+            color: #6a9cff;
+        }
+    </style>
+</head>
+<body>
+    <!-- 浮动星光装饰 -->
+    <div class="heart">✨</div>
+    <div class="heart">✧</div>
+    <div class="heart">⭐</div>
+    <div class="heart">✨</div>
+    <div class="heart">✧</div>
+    <div class="heart">⭐</div>
+    <div class="heart">✨</div>
+
+    <div class="card">
+        <div class="text">✨ 娟要天天开心呀!!! 😊</div>
+        <div class="footer">愿你每天都有轻松的小美好 ☁️✨</div>
+    </div>
+</body>
+</html>
